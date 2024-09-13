@@ -1,0 +1,47 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+
+  @include mq-below($xs) {
+    font-size: 9px;
+  }
+  @include mq-between($xxl, $xxxl) {
+    font-size: 10px;
+  }
+  @include mq-between($xxxl, $xxxxl) {
+    font-size: 11px;
+  }
+  @include mq-above($xxxxl) {
+    font-size: 13px;
+  }
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: $font;
+  font-weight: $font-regular;
+  line-height: initial;
+  font-display: "swap";
+  color: var(--black);
+  position: relative;
+}
+
+.cm-container {
+  max-width: 117rem;
+  width: 100%;
+  margin: 0 auto;
+
+  @include mq-between($md, $xxl) {
+    max-width: 97rem;
+  }
+
+  @include mq-between($sm, $md) {
+    max-width: initial;
+    padding: 0 1.6rem;
+  }
+
+  @include mq-below($xs) {
+    max-width: initial;
+    padding: 0 1.6rem;
+  }
+}

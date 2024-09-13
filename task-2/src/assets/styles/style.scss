@@ -1,0 +1,22 @@
+/*
+  @Author : Falgun Lodaya
+  @Project : UI Task 2
+  @Date : 12 sept 2024;
+*/
+
+/* config */
+@import "config/variables";
+@import "config/mixin";
+
+/* elements */
+@import "elements/reset";
+@import "elements/normalize";
+@import "elements/elements";
+
+/* common */
+@import "common/common";
+
+/* base */
+@import "base/bs-header";
+@import "base/bs-search";
+@import "base/bs-notify";
