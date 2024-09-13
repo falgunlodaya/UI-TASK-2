@@ -5,6 +5,17 @@ import iconsetting from "../../assets/images/icon-setting.svg";
 import Notification from "../Notification";
 import Profile from "../Profile";
 const Header = () => {
+  const [isNotifyOpen, setIsNotifyOpen] = React.useState(false);
+  const [isprofileOpen, setIsProfileOpen] = React.useState(false);
+
+  const handleNotifyClick = () => {
+    setIsNotifyOpen((prevState) => !prevState);
+    setIsProfileOpen(false);
+  };
+  const handleProfileClick = () => {
+    setIsProfileOpen((prevState) => !prevState);
+    setIsNotifyOpen(false);
+  };
   return (
     <>
       <header className="bs-header">
@@ -34,10 +45,17 @@ const Header = () => {
               </div>
             </li>
             <li className="item">
-              <Notification />
+              <Notification
+                isNotifyOpen={isNotifyOpen}
+                handleNotifyClick={handleNotifyClick}
+                setIsNotifyOpen={setIsNotifyOpen}
+              />
             </li>
             <li className="item">
-              <Profile />
+              <Profile
+                isprofileOpen={isprofileOpen}
+                handleProfileClick={handleProfileClick}
+              />
             </li>
           </ul>
         </div>

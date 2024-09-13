@@ -1,20 +1,16 @@
 import React from "react";
 import iconnotify from "../../assets/images/icon-notification.svg";
 import iconclose from "../../assets/images/icon-close.svg";
-function Notification() {
-  const [open, setOpen] = React.useState(false);
-  const handlechange = () => {
-    setOpen((prevState) => !prevState);
-  };
+const Notification = ({ isNotifyOpen, setIsNotifyOpen, handleNotifyClick }) => {
   return (
     <div className="bs-notify">
-      <div className="cta-action" onClick={handlechange}>
+      <div className="cta-action" onClick={handleNotifyClick}>
         <img className="cta-img" src={iconnotify} alt="icon notify" />
       </div>
-      <div className={`dropdown-notify ${open ? "active" : ""}`}>
+      <div className={`dropdown-notify ${isNotifyOpen ? "active" : ""}`}>
         <div className="title-action-wrap">
           <h4 className="title">Notifications</h4>
-          <button className="cta-close" onClick={() => setOpen(false)}>
+          <button className="cta-close" onClick={() => setIsNotifyOpen(false)}>
             <img src={iconclose} alt="icon close" />
           </button>
         </div>
@@ -53,6 +49,6 @@ function Notification() {
       </div>
     </div>
   );
-}
+};
 
 export default Notification;
