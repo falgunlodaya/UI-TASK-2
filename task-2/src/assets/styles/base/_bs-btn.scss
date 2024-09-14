@@ -1,0 +1,28 @@
+.bs-btn {
+  padding: 0.8rem 0;
+  width: 10rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  font-weight: $font-medium;
+  line-height: 18px;
+  text-align: center;
+
+  &.btn-primary {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    border-radius: 5rem;
+    &:hover {
+      background-color: var(--blue);
+      color: var(--white);
+    }
+  }
+  &.btn-secondary {
+    border: 1px solid var(--black);
+    color: var(--black);
+    border-radius: 5rem;
+    &:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+}

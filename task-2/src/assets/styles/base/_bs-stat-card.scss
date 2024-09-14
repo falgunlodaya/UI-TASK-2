@@ -1,0 +1,28 @@
+.bs-stat-card {
+  background-color: var(--white);
+  border-radius: 2.5rem;
+  padding: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+
+  .img-wrap {
+    width: 7rem;
+    height: 7rem;
+  }
+  .title-value-wrap {
+    .title {
+      font-size: 1.6rem;
+      font-weight: $font-regular;
+      line-height: 19px;
+      color: var(--text-blue-shade);
+      margin-bottom: 1.2rem;
+    }
+    .value {
+      font-size: 2rem;
+      font-weight: $font-semibold;
+      line-height: 24px;
+      color: var(--black);
+    }
+  }
+}

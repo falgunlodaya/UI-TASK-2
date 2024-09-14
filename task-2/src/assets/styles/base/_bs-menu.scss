@@ -1,0 +1,60 @@
+.bs-menu {
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25rem;
+  border-right: 1px solid var(--blue-shade);
+  padding: 2rem 2rem 2.5rem 4rem;
+
+  .logo-wrap {
+    max-width: 18.3rem;
+    width: 100%;
+  }
+  .nav-list {
+    margin: 3rem -4rem;
+    max-width: 25rem;
+    .nav-item {
+      padding: 1.5rem 0 1.5rem 4rem;
+      position: relative;
+      a {
+        text-decoration: none;
+        display: block;
+        color: var(--grey-shade);
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        &:hover {
+          color: var(--blue);
+        }
+      }
+      .icon {
+        font-size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      .text {
+        font-size: 1.8rem;
+        font-weight: $font-medium;
+        line-height: 21px;
+      }
+      &.active {
+        a {
+          color: var(--blue);
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0.6rem;
+          height: 6rem;
+          background-color: var(--blue);
+          border-radius: 0 1rem 1rem 0;
+        }
+      }
+    }
+  }
+}
